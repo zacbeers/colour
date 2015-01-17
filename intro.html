@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>colour</title>
+    <link rel="stylesheet" type="text/css" href="intro.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(function() {
+
+  var lastScrollTop = 0, delta = 5;
+
+  $(window).scroll(function(event) {
+
+    var st = $(this).scrollTop();
+
+      if(Math.abs(lastScrollTop - st) <= delta) return;
+
+      if (st > lastScrollTop) {
+        $("#hero").removeClass('hero');
+        $("#hero").addClass('logo');
+        $("#welcome").removeClass('hidden');
+        $("#welcome").addClass('visible');
+        $("#listening").removeClass('hidden');
+        $("#listening").addClass('visible');
+        $("#listening").addClass('show_late');$("#interaction").removeClass('intro');
+        $("#interaction").addClass('speak');
+      }
+    lastScrollTop = st;
+    });
+
+  });
+        </script>
+</head>
+<body>
+    <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<img src="http://zacbeers.com/colour/logo.jpg" id="hero" class="hero slow">
+
+<div id="interaction" class="intro">
+  <h1 id="welcome" class="hidden slow">Welcome to COLOUR</h1>
+  <h3 id="listening" class="hidden slow">go ahead, i'm listening...</h3>
+  <form>
+    <textarea onclick="this.focus();this.select()"></textarea>
+  </form>
+</div>
+</body>
+</html>

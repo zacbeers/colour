@@ -1,0 +1,152 @@
+* {
+  -webkit-transition: all ease-in-out 1s;
+  -moz-transition: all ease-in-out 1s;
+  -o-transition: all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+  font-family: sans-serif;
+  color: #eee;
+  font-family: 'Slabo 27px', serif;
+}
+
+.fast {
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+.slow {
+-webkit-transition: all ease-in-out 2s;
+  -moz-transition: all ease-in-out 2s;
+  -o-transition: all ease-in-out 2s;
+  transition: all ease-in-out 2s;
+}
+
+::selection {
+  color: #252525;
+  background: #ffffff!important; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: #252525;
+  background: #ffffff!important; /* Gecko Browsers */
+}
+::-webkit-selection {
+  color: #252525;
+  background: #ffffff!important; /* chrome + safari */
+}
+
+html, body {
+  background: #252525;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+::-webkit-scrollbar-thumb:vertical {
+    background-color:#252525;
+    height:1px;
+    }
+ 
+::-webkit-scrollbar-thumb:horizontal {
+    background-color:#252525;
+    height:1px!important;
+    }
+ 
+::-webkit-scrollbar-thumb:vertical {
+background: #252525;
+height:1px;}
+::-webkit-scrollbar-thumb:horizontal{
+background: #252525;
+height:1px;}
+::-webkit-scrollbar{
+height:1px;
+width:1px;
+background-color:#252525;}
+
+.hero {
+  width: 40%;
+  margin-left: 30%;
+  position: fixed;
+  display: block;
+  margin-top: 10%;
+  margin-bottom: 500%;
+}
+.logo {
+  width: 5%;
+  margin-top: 1%;
+  position: fixed;
+  display: block;
+}
+.intro {
+  position: relative;
+  width: 100%;
+  height: 101%;
+  display: block;
+  color: white;
+}
+.speak {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.hidden {
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  text-align:center;
+  opacity: 0;
+}
+.visible {
+  position: absolute;
+  bottom:20%;
+  width: 100%;
+  text-align:center;
+  opacity: 1;
+  -webkit-animation:  goodbye 6s 1 forwards;
+}
+
+.show_late {
+  -webkit-animation:  listening 20s 1 forwards;
+}
+
+@-webkit-keyframes goodbye {
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+}
+@-webkit-keyframes listening {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0
+  }  
+  90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+}
+form {
+  width: 100%;
+  height:100%;
+  display: block;
+}
+textarea {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  font-size: 100%;
+  text-align: center;
+  color: #fff;
+  background: transparent;
+  border: 0px;
+  outline: 0px;
+  frame: 0px;
+  cursor: default;
+}
